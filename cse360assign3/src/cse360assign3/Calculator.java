@@ -25,7 +25,7 @@ public class Calculator {
 	 */
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -34,8 +34,9 @@ public class Calculator {
 	 * @param new Integer to be added
 	 */
 	
-	public void add (int value) {
-		
+	public void add (int value) 
+	{
+		total += value;
 	}
 	
 	/**
@@ -44,8 +45,9 @@ public class Calculator {
 	 * @param new Integer to be subtracted
 	 */
 	
-	public void subtract (int value) {
-		
+	public void subtract (int value) 
+	{
+		total -= value;
 	}
 	
 	/**
@@ -54,8 +56,9 @@ public class Calculator {
 	 * @param new Integer to be multiplied
 	 */
 	
-	public void multiply (int value) {
-		
+	public void multiply (int value) 
+	{
+		total = total * value;
 	}
 	
 	/**
@@ -64,9 +67,14 @@ public class Calculator {
 	 * @param new Integer to be divided
 	 */
 	
-	public void divide (int value) {
-		
+	public void divide (int value) 
+	{
+		if (value == 0)
+			total = 0;
+		else
+			total = total / value;
 	}
+		
 	
 	/**
 	 * Returns the total list of calculations that have been performed by the calculator method

@@ -30,7 +30,7 @@ public class CalculatorTest {
 		calc.subtract(14);
 		calc.subtract(6);
 		int total= calc.getTotal();
-		assertEquals(total, 20);
+		assertEquals(-20, total);
 	}
 	@Test
 	public void subtractTest2() 
@@ -40,7 +40,7 @@ public class CalculatorTest {
 		calc.subtract(6);
 		calc.subtract(-5);
 		int total= calc.getTotal();
-		assertEquals(total, 15);
+		assertEquals(-15, total);
 	}
 	@Test
 	public void multiplyTest1() 
@@ -60,13 +60,22 @@ public class CalculatorTest {
 		assertEquals(total, 21);
 	}
 	@Test
-	public void divideTest() 
+	public void divideTest1() 
 	{
 		Calculator calc = new Calculator();
 		calc.add(15);
 		calc.divide(5);
 		int total= calc.getTotal();
 		assertEquals(total, 3);
+	}
+	@Test
+	public void divideTest2() 
+	{
+		Calculator calc = new Calculator();
+		calc.add(20);
+		calc.divide(0);
+		int total= calc.getTotal();
+		assertEquals(total, 0);
 	}
 	@Test
 	public void calcTest() 
